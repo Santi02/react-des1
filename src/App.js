@@ -1,10 +1,11 @@
-
+import NavBar from "./NavBar.js"
 
 function App() {
   return (
     <div className="miApp">
-      <h1>Primer app en react Js </h1>
+      <NavBar />
     </div>
+    
   );
 }
 

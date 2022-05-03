@@ -1,3 +1,23 @@
-h1 {
-    color: aquamarine;
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    height: 50px;
+    width: 100%;
+    background: #eaeaea;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+
+
+}
+.me-auto1{
+    background-color: antiquewhite;
+}
+.me-auto{
+    background-color: antiquewhite;
+    column-gap: 200px;
 }
