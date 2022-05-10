@@ -8,9 +8,9 @@ import './components/Navbar' ;
 
 const root = ReactDOM.createRoot(document.getElementById('root' ));
 root.render(
-    <React.StricMode>
+    <React.StrictMode>
         <App />
-    </React.StricMode>
+    </React.StrictMode>
 );
 
 
