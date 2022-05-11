@@ -1,7 +1,7 @@
 
 import  {Navbar, Container,Nav, NavDropdown} from "react-bootstrap"
 import CartWidget from "./CartWidget";
-
+import ItemCount from "./ItemCount";
 
 
 export default function Header() {
