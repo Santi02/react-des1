@@ -1,0 +1,21 @@
+.barra{
+    display: block;
+    background-color: bisque;
+    background-size: auto;
+    padding: 3rem;
+    font-family: sans-serif;
+    justify-content: space-between;
+
+}
+
+.dist{
+    justify-content: space-between;
+}
+
+.tituloPrincipal{
+    size: 3rem;
+}
+
+.titulo{
+    font-size: 80px;
+}

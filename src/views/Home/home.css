@@ -1,0 +1,26 @@
+.carousel{
+    display: block;
+    box-sizing: border-box;
+    size: 80%;
+    width: 50rem;
+    height: 35rem;
+    margin-left: 18rem;
+    padding-top: 2rem;
+    margin-bottom: 5rem;
+}
+.img{
+    height: 35rem;
+}
+.descr{
+    color: black;
+    padding-top: 10rem;
+}
+.fondo{
+    background-color: #B0A76C;
+    padding-bottom: 10rem;
+}
+.descripcion{
+    margin: 3rem;
+    padding: 2rem;
+    font-size: 1.2rem;
+}
