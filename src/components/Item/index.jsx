@@ -10,3 +10,4 @@ const Item = ({info}) => {
     );
 }
 export default Item;
+
