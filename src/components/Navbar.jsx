@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <Navbar bg="light" expand="lg">
   <Container className="barra">
-    <Navbar.Brand className="tituloPrincipal" href="#home">Sofitel</Navbar.Brand>
+    <Navbar.Brand className="tituloPrincipal" href="/Home">Sofitel</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
