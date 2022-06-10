@@ -1,29 +1,28 @@
-
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import ItemDetailContaner from "./components/ItemDetailContainer";
+import ItemDetailContainer from "./components/ItemDetailContainer";
 import Navbar from "./components/Navbar";
-import Reservas from './views/Reservas/Reservas';
+// import Reservas from './views/Reservas/Reservas';
 import Home from './views/Home/Home';
+import ItemListContainer from './components/ItemListContainer';
+import Cart from "./components/Cart";
 
 
 function App(){
     return(
-        <div className="App">
+    
         <>
-        <Navbar />
         <BrowserRouter>
+        <Navbar />
         <Routes>
-
-            <Route exact path= "/Home" element = {<Home />} />
-            {/* <Route exact path= "/imagenes" element = {<Imagenes />} /> */}
-            <Route exact path= "/reservas" element = {<Reservas />} />
+            <Route exact path= '/Home' element = {<Home />} />
+            <Route exact path= '/Reservas' element = {<ItemListContainer />} />
+            <Route exact path= '/Cart' element = {<Cart />} />
+            <Route exact path= '/detalle/:detalleId' element = {<ItemDetailContainer />} />
         </Routes>
         </BrowserRouter>
-        <ItemDetailContaner />
         </>
 
-        </div>
     );
 }
 export default App;

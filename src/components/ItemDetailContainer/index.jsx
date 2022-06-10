@@ -1,15 +1,36 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect} from 'react' ;
+import { useParams } from 'react-router-dom';
+import ItemDetail from '../ItemDetail';
 
-import ItemDetail from "../ItemDetail";
 
-// const film = {id: 1, image:"https://www.kayak.com.ar/rimg/himg/8a/7c/3b/ice-37894-68605636_3XL-663425.jpg?width=720&height=576&crop=true",title: "Habitacion" };
+const films = [
+    { id: 1 , image: "https://www.cataloniahotels.com/es/blog/wp-content/uploads/2016/05/habitaci%C3%B3n-individual-catalonia-620x412.jpg" , title: "Single" },
+    { id: 2 , image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq_Nmd2rB6XJzE-5YLoas9TYBYEYj3E9CzwA&usqp=CAU", title: "Doble" },
+    { id: 3 , image:"https://i.pinimg.com/originals/08/a7/dd/08a7dd8746cac9afed89b25265871dc2.jpg", title: "Suite" },
+];
 
-export const ItemDetailContaner = () => {
+
+export const ItemDetailContainer = () => {
+    
+    
     const [data, setData] = useState({});
+    const {detalleId} = useParams ();
+
+    useEffect(() => {
+        const getData = new Promise( resolve  =>{
+            setTimeout (() => {
+                resolve(films);
+            },2000);
+        });
+        getData.then(res => setData(res.find(film=>film.id === parseInt(detalleId))));
+
+    }, [])
 
 
-    return(
-        <ItemDetail data={data} />
-    );
-}
-export default ItemDetailContaner;
+        return (
+            <ItemDetail data={data} />
+        );
+    }
+    
+export default ItemDetailContainer;
+
