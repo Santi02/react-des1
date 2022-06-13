@@ -1,11 +1,17 @@
+import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import Navbar from "./components/Navbar";
-// import Reservas from './views/Reservas/Reservas';
 import Home from './views/Home/Home';
 import ItemListContainer from './components/ItemListContainer';
 import Cart from "./components/Cart";
+import CartProvider from './CartContext';
+
+
+// export const CartContext = React.createContext ('');
+// console.log('CartContext: ', CartContext);
+
 
 
 function App(){
@@ -13,6 +19,8 @@ function App(){
     
         <>
         <BrowserRouter>
+        {/* <CartContext.Provider value='Santiago'> */}
+        <CartProvider>
         <Navbar />
         <Routes>
             <Route exact path= '/Home' element = {<Home />} />
@@ -20,6 +28,8 @@ function App(){
             <Route exact path= '/Cart' element = {<Cart />} />
             <Route exact path= '/detalle/:detalleId' element = {<ItemDetailContainer />} />
         </Routes>
+        </CartProvider>
+        {/* </CartContext.Provider> */}
         </BrowserRouter>
         </>
 

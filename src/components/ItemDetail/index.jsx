@@ -2,19 +2,19 @@ import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import ItemCount from '../ItemCount';
 import './itemDetail.css';
+import { useCartContext } from '../../CartContext';
+
 
 export const ItemDetail = ({data}) => {
     const [goToCart, setGoToCart] = useState(false); 
+    const {addProduct} = useCartContext();
+    
 
     const onAdd = (quantity) => {
         setGoToCart(true);
+        addProduct(data, quantity);
     }
     
-    // const onAdd = (quantity) => {
-    //     console.log (`Reservaste ${quantity} habitaciones`)  ;
-    // }
-
-
     return (
         <div className= "container">
             <div className = "detail">
