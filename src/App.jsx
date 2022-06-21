@@ -23,6 +23,7 @@ function App(){
         <CartProvider>
         <Navbar />
         <Routes>
+            <Route exact path= '/' element = {<Home />} /> 
             <Route exact path= '/Home' element = {<Home />} />
             <Route exact path= '/Reservas' element = {<ItemListContainer />} />
             <Route exact path= '/Cart' element = {<Cart />} />
