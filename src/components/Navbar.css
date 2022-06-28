@@ -19,3 +19,38 @@
 .titulo{
     font-size: 80px;
 }
+
+.nav__link{
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    color: gray;
+    font-weight: bold;
+    margin-top: 1rem;
+    display: block;
+    text-align:justify;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 30;
+    padding: 1rem;
+}
+
+@media (min-width: 768px){
+.nav__link {
+    flex-direction: row;
+    justify-content: space-between;
+}
+}
+
+
+.nav__link1{
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    color: goldenrod;
+    font-weight: bold;
+    width: 90%;
+    font-size: large;
+    margin-right: 3rem;
+    margin-top: 4rem;
+}

@@ -1,8 +1,9 @@
-import { addDoc, getFirestore } from "firebase/firestore";
+import { addDoc, getFirestore, collection } from "firebase/firestore";
 import React from "react";
 import { Link } from 'react-router-dom'
 import { useCartContext } from "../../CartContext";
 import ItemCart from "../ItemCart";
+
 
 
 const Cart = () => {
@@ -32,8 +33,12 @@ addDoc(ordersCollection, order)
     if (cart.length === 0) {
         return (
             <>
+            <div className="compras">
             <p>No hay elementos en el carrito</p>
+
             <Link to='/Reservas'>Hacer compras</Link>
+
+            </div>
             </>
         );
     }

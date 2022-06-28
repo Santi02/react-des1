@@ -8,21 +8,22 @@ export const Navbar = () => {
         <div className= "container">
           <nav className="nav">
             <div className="brand1">
-              <NavLink className="nav__link" to='/Home'>Sofitel</NavLink>
+              <NavLink className="nav__link1" to='/Home'>Sofitel</NavLink>
             </div>
-            <ul className="nav__list">
-              <li>
+            <p className="nav__list">
+              <a>
                 <NavLink className="nav__link" to='Reservas'>Reservas</NavLink>
-              </li>
-              <li>
+              </a>
+              <a>
                 <NavLink className="nav__link" to='Cart'>
                   <CartWidget />
                 </NavLink>
-              </li>
-            </ul>
+              </a>
+            </p>
           </nav>
         </div>
   );
 }
 
 export default Navbar;
+<a></a>
